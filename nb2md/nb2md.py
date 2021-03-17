@@ -92,7 +92,8 @@ class Notebook:
         :return:
         """
 
-        if pathname.endswith(".json"):
+        if pathname.endswith(".json") or \
+           pathname.endswith(".zpln"):
             self.parseZeppelin(pathname)
         elif pathname.endswith(".ipynb"):
             self.parseJupyter(pathname)
